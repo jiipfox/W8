@@ -8,7 +8,7 @@ function MyList(props) {
         <li key ={item.id.toString()}>{item.text}</li>);
     return  (
       <div>
-      <h1>{props.header}</h1>
+      <h1>{header}</h1>
       <ol>
         {lis}
       </ol>
