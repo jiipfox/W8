@@ -1,12 +1,18 @@
 function MyList(props) {
     console.log("My list function");
     const items = props.items;
-    const header = props.hearer;
+    const header = props.header;
     console.log(items);
      const lis  = items.map((item) =>
         //<li>{item.id} = {item.text}</li>
-        <li>{item.text}</li>);
-    return  (<ul>{lis}</ul>);
+        <li key ={item.id.toString()}>{item.text}</li>);
+    return  (
+      <div>
+      <h1>{props.header}</h1>
+      <ol>
+        {lis}
+      </ol>
+      </div>);
   }
 
   export default MyList
